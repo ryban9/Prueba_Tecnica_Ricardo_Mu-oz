@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.eShopWeb.Web.Catalogos.Services;
 using Microsoft.eShopWeb.Web.Interfaces;
 using Microsoft.eShopWeb.Web.Services;
 
@@ -15,6 +16,7 @@ public static class ConfigureWebServices
         services.AddScoped<ICatalogItemViewModelService, CatalogItemViewModelService>();
         services.Configure<CatalogSettings>(configuration);
         services.AddScoped<ICatalogViewModelService, CachedCatalogViewModelService>();
+        services.AddScoped<IListProdLocalidad, ListProdLocalidad>();
 
         return services;
     }

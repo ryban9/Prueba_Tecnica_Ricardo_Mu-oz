@@ -17,7 +17,7 @@ public class AppIdentityDbContextSeed
 
         await roleManager.CreateAsync(new IdentityRole(BlazorShared.Authorization.Constants.Roles.ADMINISTRATORS));
 
-        var defaultUser = new ApplicationUser { UserName = "demouser@microsoft.com", Email = "demouser@microsoft.com" };
+        var defaultUser = new ApplicationUser { UserName = "sistemaCompras@pruebas.com", Email = "sistemaCompras@pruebas.com" };
         await userManager.CreateAsync(defaultUser, AuthorizationConstants.DEFAULT_PASSWORD);
 
         string adminUserName = "admin@microsoft.com";
